@@ -5,6 +5,8 @@ import { path } from "./gulp/config/path.js";
 // Импорт общих плагинов
 import { plugins } from "./gulp/config/plugins.js";
 
+import ghPages from 'gulp-gh-pages';
+
 // Передаем значения в глобальную переменную
 global.app = {
 	isBuild: process.argv.includes('--build'),
@@ -57,3 +59,8 @@ export { deployFTP }
 
 // Выполнение сценария по умолчанию
 gulp.task('default', dev);
+
+gulp.task('deploy', function() {
+	return gulp.src('./dist/**/*')
+	  .pipe(ghPages());
+  });
