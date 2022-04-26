@@ -1,0 +1,46 @@
+@media (max-width: 1200px) {
+    .aside {
+        position: relative;
+        &__wrapper {
+            display: flex;
+            img {
+                margin-right: 5px;
+                margin-bottom: 22px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+        }
+        li {
+            font-size: 10px;
+        }
+        .searchPosts {
+            display: none;
+        }
+    }
+
+}
+@media (max-width: 768px) {
+    .aside {
+        grid-column: 1/2;
+        position: relative;
+        padding-left: 0;
+        &::before {
+            content: '';
+            border: none;
+        }
+        &__wrapper {
+            display: flex;
+            img {
+                margin-right: 20px;
+                margin-bottom: 22px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
+        li {
+            font-size: 14px;
+        }
+    }
+}

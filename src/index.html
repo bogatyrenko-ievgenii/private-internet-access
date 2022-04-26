@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/head.html',{
+	"title":"BLOG"
+	})
+	<body>
+		<div class="warning">
+			<ul class="warning__wrapper fz12reg">
+				<li class="triangleUp"></li>
+				<li>You are not protected</li>
+				<li><span>Your IP Address: 107.3.176.194</span><span>Your ISP: Comcast Cable</span></li>
+			</ul>
+			<a href="#" class="warning__link fz12reg">Learn More ›</a>
+			<div class="warning__close close"></div>
+		</div>
+		@@include('html/header.html', {})
+		@@include('html/featured-article.html', {})
+		@@include('html/tagsnav.html', {})
+		<div class="main-grid">
+			<div class="container">
+				@@include('html/main.html', {})
+				@@include('html/aside.html', {})
+			</div>
+		</div>
+		@@include('html/pricing.html', {})
+		@@include('html/footer.html', {})
+		<script src="js/app.min.js"></script>
+	</body>
+</html>

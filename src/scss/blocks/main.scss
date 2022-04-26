@@ -1,0 +1,66 @@
+.main {
+    grid-column: 1/2;
+    > button {
+        display: block;
+        margin: 40px auto 0 auto;
+        width: 260px;
+    }
+    .searchPosts {
+		display: none;
+	}
+    &__title {
+        color: $blackDark;
+    }
+    &__post {
+        padding-bottom: 30px;
+        padding-top: 40px;
+        min-height: 210px;
+        display: flex;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: calc(100% - 40px);
+            border-bottom: 1px solid $greyLines;
+        }
+        > img {
+            height: 180px;
+            object-fit: cover;
+        }
+    }
+    &__wrapper {
+        margin-left: 40px;
+        justify-self: end;
+    }
+    &__text {
+        margin-bottom: 14px;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__name {
+        color: $blackLight;
+        margin-bottom: 9px;
+        span {
+            color: $greyLight;
+        }
+    }
+    
+    &__descr {
+        text-transform: uppercase;
+        color: $green;
+        margin-bottom: 15px;
+    }
+    &__soc {
+        img {
+            width: 16px;
+        }
+    }
+}
+

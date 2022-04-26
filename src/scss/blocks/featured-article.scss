@@ -1,0 +1,39 @@
+.featured {
+    .container {
+        margin: 0 12.5% 30px 12.5%;
+        min-height: 400px;
+        border: 1px solid $greyLight;
+        border-radius: 5px;
+        display: flex;
+    }
+    &__cover {
+        width: 50%;
+        object-fit: cover;
+    }
+    &__wrapper{
+        padding: 60px 60px 41px 60px;
+    }
+    &__text {
+        color: $blackDark;
+        margin-bottom: 18%;
+    }
+    &__card {
+        height: 78px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__name {
+        color: $blackDark;
+        span {
+            color: $greyLight;
+        }
+    }
+    &__descr {
+        color: $green;
+        text-transform: uppercase;
+    }
+    &__soc {
+        color: $greyLight;
+    }
+}

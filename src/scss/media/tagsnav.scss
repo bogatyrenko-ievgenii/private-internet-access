@@ -1,0 +1,23 @@
+@media (max-width: 1200px) {
+    .tags{
+        .container {
+            font-size: .2em;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .tags {
+        .container {
+            height: 90px;
+            flex-wrap: wrap;
+        }
+        &__contacts {
+            flex-basis: 19%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .tags {
+        display: none;
+    }
+}

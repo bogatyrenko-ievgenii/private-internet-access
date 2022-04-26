@@ -1,0 +1,39 @@
+.tags {
+    .container {
+        margin: 0 12.5% 40px 12.5%;
+        padding: 0 33px 0 33px;
+        height: 60px;
+        background-color: $greyDark;
+        color: $blackLight;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    &__link {
+        color: $green;
+        text-decoration: none;
+    }
+    &__list{  
+        list-style-type: none;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        flex-basis: 745px;
+        margin-right: 20px;
+    }
+    &__contacts {
+        display: flex;
+        flex-basis: 135px;
+        text-align: center;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            color: $blackLight;
+            // margin-right: 12px;
+        }
+     
+    }
+}

@@ -1,0 +1,35 @@
+
+@media (max-width: 768px) {
+    .warning {
+        justify-content: start;
+        &__link {
+            position: absolute;
+            top:14px;
+            right: 48px;
+        }
+        &__close {
+            top: 11px;
+            right: 11px;
+        }
+        &__wrapper {
+            margin-left: 20px;
+            li {
+                &:nth-child(3) {
+                    display: block;
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .warning {
+        &__wrapper {
+            li {
+                &:nth-child(3) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
