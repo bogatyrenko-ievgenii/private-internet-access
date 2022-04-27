@@ -535,13 +535,19 @@
 }
 
 .featured__cover {
-  width: 50%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .featured__wrapper {
+  width: 50%;
   padding: 60px 60px 41px 60px;
+}
+
+.featured__wrapper:first-child {
+  padding: 0;
 }
 
 .featured__text {
@@ -599,7 +605,7 @@
   border-left: 1px solid rgb(235, 236, 237);
 }
 
-.aside__wrapper img {
+.aside__icon {
   margin-right: 20px;
   margin-bottom: 22px;
   width: 16.66%;
@@ -654,7 +660,7 @@
   border-bottom: 1px solid rgb(235, 236, 237);
 }
 
-.aside > img {
+.aside__cover {
   margin-bottom: 52px;
   width: 100%;
 }
@@ -885,7 +891,17 @@
   padding-left: 58px;
   position: relative;
   color: rgb(34, 37, 46);
-  background: url("../../img/icons/search.svg") 20px 50% no-repeat;
+  background: url("../img/icons/search.svg") 20px 50% no-repeat;
+}
+
+.footer__wrapper-logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footer__wrapper-logo img {
+  width: 100%;
 }
 
 .footer a {
@@ -930,55 +946,55 @@
   grid-auto-rows: 160px;
   gap: 15px;
   -ms-grid-rows: auto 15px auto 15px auto 15px auto;
-      grid-template-areas: "b0 b0 . . " "b1 b2 b4 b5" "b1 b3 b4 b5" ". . . b6";
+      grid-template-areas: "logo logo . . " "company programs legal about" "company learn legal about" ". . . socials";
 }
 
-.footer .container .b0 {
+.footer .container .logo {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  grid-area: b0;
+  grid-area: logo;
   -ms-grid-row-align: center;
       align-self: center;
 }
 
-.footer .container .b1 {
+.footer .container .company {
   -ms-grid-row: 3;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
-  grid-area: b1;
+  grid-area: company;
 }
 
-.footer .container .b2 {
+.footer .container .programs {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
-  grid-area: b2;
+  grid-area: programs;
 }
 
-.footer .container .b3 {
+.footer .container .learn {
   -ms-grid-row: 5;
   -ms-grid-column: 3;
-  grid-area: b3;
+  grid-area: learn;
 }
 
-.footer .container .b4 {
+.footer .container .legal {
   -ms-grid-row: 3;
   -ms-grid-row-span: 3;
   -ms-grid-column: 5;
-  grid-area: b4;
+  grid-area: legal;
 }
 
-.footer .container .b5 {
+.footer .container .about {
   -ms-grid-row: 3;
   -ms-grid-row-span: 3;
   -ms-grid-column: 7;
-  grid-area: b5;
+  grid-area: about;
 }
 
-.footer .container .b6 {
+.footer .container .socials {
   -ms-grid-row: 7;
   -ms-grid-column: 7;
-  grid-area: b6;
+  grid-area: socials;
   position: relative;
   top: -80px;
 }
@@ -988,10 +1004,10 @@
     margin-right: 12.5%;
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "b0 b0 ." "b1 b2 b4" "b1 b3 b6" "b5 b5 b5" "b5 b5 b5";
+        grid-template-areas: "logo logo ." "company programs legal" "company learn socials" "about about about" "about about about";
   }
 
-  .footer .container .b6 {
+  .footer .container .socials {
     top: 0px;
   }
 
@@ -1000,36 +1016,36 @@
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
   }
-  .footer .container .b0 {
+  .footer .container .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
   }
-  .footer .container .b1 {
+  .footer .container .company {
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
   }
-  .footer .container .b2 {
+  .footer .container .programs {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
-  .footer .container .b3 {
+  .footer .container .learn {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
   }
-  .footer .container .b4 {
+  .footer .container .legal {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     -ms-grid-column: 3;
   }
-  .footer .container .b5 {
+  .footer .container .about {
     -ms-grid-row: 4;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
   }
-  .footer .container .b6 {
+  .footer .container .socials {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
   }
@@ -1048,13 +1064,13 @@
     display: block;
   }
 
-  .main__post > img {
-    width: 100%;
-    margin-bottom: 20px;
+  .main__wrapper {
+    margin: 0 40px 0 40px;
   }
 
-  .main__wrapper {
-    margin-left: 0;
+  .main__wrapper:first-child img {
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .main .searchPosts {
@@ -1199,10 +1215,8 @@
             flex-direction: column;
   }
 
-  .featured__cover {
+  .featured__wrapper {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 
   .featured__text {
@@ -1264,60 +1278,60 @@
     grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: 90px 110px 190px 180px 330px;
     grid-template-rows: 90px 110px 190px 180px 330px;
-        grid-template-areas: "b0 b0" "b1 b2" "b1 b3" "b4 b6" "b5 b5";
+        grid-template-areas: "logo logo" "company programs" "company learn" "legal socials" "about about";
   }
 
-  .footer .container .b2 {
+  .footer .container .programs {
     -ms-grid-column-align: center;
         justify-self: center;
   }
 
-  .footer .container .b3 {
+  .footer .container .learn {
     -ms-grid-column-align: center;
         justify-self: center;
   }
 
-  .footer .container .b6 {
+  .footer .container .socials {
     -ms-grid-column-align: center;
         justify-self: center;
   }
 
-  .footer .container .b0 {
+  .footer .container .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
   }
 
-  .footer .container .b1 {
+  .footer .container .company {
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
   }
 
-  .footer .container .b2 {
+  .footer .container .programs {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
 
-  .footer .container .b3 {
+  .footer .container .learn {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
   }
 
-  .footer .container .b4 {
+  .footer .container .legal {
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
   }
 
-  .footer .container .b5 {
+  .footer .container .about {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
   }
 
-  .footer .container .b6 {
+  .footer .container .socials {
     -ms-grid-row: 4;
     -ms-grid-column: 2;
   }

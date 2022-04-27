@@ -2,13 +2,15 @@
    .main {
 	&__post {
 		display: block;
-		> img {
-			width: 100%;
-			margin-bottom: 20px;
-		}
 	}
 	&__wrapper {
-		margin-left: 0;
+		margin: 0 40px 0 40px;
+		&:first-child {
+			img {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
 	}
 	.searchPosts {
 		display: inline-block;

@@ -10,13 +10,13 @@
         .container {
             flex-direction: column;
         }
-        &__cover {
+        &__wrapper {
             width: 100%;
-            object-fit: cover;
         }
         &__text {
             margin-bottom: 17px;
         }
+
     }
 }
 @media (max-width: 576px) {

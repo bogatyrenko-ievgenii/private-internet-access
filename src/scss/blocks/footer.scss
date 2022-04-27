@@ -1,4 +1,10 @@
 .footer {
+    &__wrapper-logo {
+        align-self: center;
+        img {
+            width: 100%;
+        }
+    }
     a {
         text-decoration: none;
         color: $greyLight;
@@ -30,32 +36,32 @@
         grid-auto-rows: 160px;
         gap: 15px;
         grid-template-areas: 
-        'b0 b0 . . '
-        'b1 b2 b4 b5'
-        'b1 b3 b4 b5'
-        '. . . b6';
+        'logo logo . . '
+        'company programs legal about'
+        'company learn legal about'
+        '. . . socials';
 
-       .b0 {
-            grid-area: b0;
+       .logo {
+            grid-area: logo;
             align-self: center;
         }
-        .b1{
-            grid-area: b1;
+        .company{
+            grid-area: company;
         }
-        .b2{
-            grid-area: b2;
+        .programs{
+            grid-area: programs;
         }
-        .b3{
-            grid-area: b3;
+        .learn{
+            grid-area: learn;
         }
-        .b4{
-            grid-area: b4;
+        .legal{
+            grid-area: legal;
         }
-        .b5{
-            grid-area: b5;
+        .about{
+            grid-area: about;
         }
-        .b6{
-            grid-area: b6;
+        .socials{
+            grid-area: socials;
             position: relative;
             top: -80px;
         }

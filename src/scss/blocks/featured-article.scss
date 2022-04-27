@@ -7,10 +7,15 @@
         display: flex;
     }
     &__cover {
-        width: 50%;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
     &__wrapper{
+        &:first-child {
+            padding: 0;
+        }
+        width: 50%;
         padding: 60px 60px 41px 60px;
     }
     &__text {
