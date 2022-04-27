@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/head.html',{
+	<!-- @@include('html/head.html',{
 	"title":"BLOG"
-	})
+	}) -->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/index.min.css">
+		<title>Blog</title>
+	</head>
 	<body>
 		<div class="warning">
 			<ul class="warning__wrapper fz12reg">
@@ -13,16 +20,16 @@
 			<a href="#" class="warning__link fz12reg">Learn More ›</a>
 			<div class="warning__close close"></div>
 		</div>
-		@@include('html/header.html', {})
-		@@include('html/featured-article.html', {})
-		@@include('html/tagsnav.html', {})
+		@@include('html/header.html',{})
+		@@include('html/featured-article.html',{})
+		@@include('html/tagsnav.html',{})
 		<div class="main-grid">
 			<div class="container">
-				@@include('html/main.html', {})
-				@@include('html/aside.html', {})
+				@@include('html/main.html',{})
+				@@include('html/aside.html',{})
 			</div>
 		</div>
-		@@include('html/pricing.html', {})
+		@@include('html/pricing.html',{})
 		@@include('html/footer.html', {})
 		<script src="js/app.min.js"></script>
 	</body>
